@@ -14,7 +14,6 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
       <div className="navbar mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
         <div className="navbar-start">
           <a
             href="#home"
@@ -25,7 +24,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
         <div className="navbar-center hidden lg:flex">
           <nav>
             <ul className="menu menu-horizontal gap-2">
@@ -43,7 +41,6 @@ const Navbar = () => {
           </nav>
         </div>
 
-        {/* Desktop Auth Buttons */}
         <div className="navbar-end hidden gap-3 lg:flex">
           <button className="btn btn-ghost rounded-full px-5">
             Sign In
@@ -54,7 +51,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="navbar-end lg:hidden">
           <button
             type="button"
@@ -97,7 +93,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="border-t border-gray-100 bg-white lg:hidden">
           <nav className="mx-auto max-w-7xl px-4 py-4">

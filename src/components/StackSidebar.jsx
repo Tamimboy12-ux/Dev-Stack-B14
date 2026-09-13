@@ -3,7 +3,6 @@ import StackItem from "./StackItem";
 const StackSidebar = ({ stack, onRemove, onRemoveAll }) => {
   return (
     <aside className="h-fit rounded-2xl border border-gray-200 bg-white p-5 shadow-sm lg:sticky lg:top-24">
-      {/* Header */}
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
@@ -32,7 +31,6 @@ const StackSidebar = ({ stack, onRemove, onRemoveAll }) => {
         )}
       </div>
 
-      {/* Empty State */}
       {stack.length === 0 ? (
         <div className="mt-6 rounded-xl border border-dashed border-gray-300 bg-gray-50 px-5 py-10 text-center">
           <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-white text-gray-400 shadow-sm">
@@ -63,7 +61,6 @@ const StackSidebar = ({ stack, onRemove, onRemoveAll }) => {
         </div>
       ) : (
         <>
-          {/* Selected Items */}
           <div className="mt-6 space-y-3">
             {stack.map((technology) => (
               <StackItem
@@ -74,7 +71,6 @@ const StackSidebar = ({ stack, onRemove, onRemoveAll }) => {
             ))}
           </div>
 
-          {/* Summary */}
           <div className="mt-6 rounded-xl bg-gray-900 p-4 text-white">
             <div className="flex items-center justify-between">
               <span className="text-sm text-gray-400">

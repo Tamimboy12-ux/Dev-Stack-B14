@@ -1,6 +1,12 @@
 import TechnologyGrid from "./TechnologyGrid";
+import StackSidebar from "./StackSidebar";
 
-const TechnologiesSection = ({ onAdd }) => {
+const TechnologiesSection = ({
+  stack,
+  onAdd,
+  onRemove,
+  onRemoveAll,
+}) => {
   return (
     <section
       id="technologies"
@@ -29,34 +35,36 @@ const TechnologiesSection = ({ onAdd }) => {
 
         {/* Category Summary */}
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-            Frontend
-          </span>
-
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-            Backend
-          </span>
-
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-            Database
-          </span>
-
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-            Language
-          </span>
-
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-            Styling
-          </span>
-
-          <span className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700">
-            DevOps
-          </span>
+          {[
+            "Frontend",
+            "Backend",
+            "Database",
+            "Language",
+            "Styling",
+            "DevOps",
+          ].map((category) => (
+            <span
+              key={category}
+              className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700"
+            >
+              {category}
+            </span>
+          ))}
         </div>
 
-        {/* Technology Cards */}
-        <div className="mt-12">
-          <TechnologyGrid onAdd={onAdd} />
+        {/* Main Content */}
+        <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_340px]">
+          {/* Technology Cards */}
+          <div>
+            <TechnologyGrid onAdd={onAdd} />
+          </div>
+
+          {/* Your Stack */}
+          <StackSidebar
+            stack={stack}
+            onRemove={onRemove}
+            onRemoveAll={onRemoveAll}
+          />
         </div>
       </div>
     </section>

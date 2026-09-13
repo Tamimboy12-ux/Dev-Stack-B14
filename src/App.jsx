@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import TechnologiesSection from "./components/TechnologiesSection";
@@ -110,6 +111,8 @@ const App = () => {
           you.
         </p>
       </section>
+
+      <Footer />
     </div>
   );
 };

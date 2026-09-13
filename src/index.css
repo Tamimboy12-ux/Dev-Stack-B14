@@ -37,3 +37,13 @@ body {
 .gradient-bg {
   background: var(--brand-gradient);
 }
+
+.Toastify__toast {
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.Toastify__toast-container {
+  width: min(360px, calc(100vw - 32px));
+}
